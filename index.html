@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BeamerDeck</title>
+  <link rel="stylesheet" href="./viewer/styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="toolbar">
+      <div class="title-group">
+        <strong id="deck-title">BeamerDeck</strong>
+        <span id="deck-author"></span>
+      </div>
+      <div class="controls">
+        <button id="prev" type="button" title="Предыдущий слайд">←</button>
+        <span class="page-indicator">
+          <input id="page-number" type="number" min="1" value="1" aria-label="Номер слайда">
+          <span>/</span><span id="page-count">—</span>
+        </span>
+        <button id="next" type="button" title="Следующий слайд">→</button>
+        <button id="fit" type="button" title="Вписать слайд">Вписать</button>
+        <button id="fullscreen" type="button" title="Полноэкранный режим">⛶</button>
+        <a id="open-pdf" href="#" target="_blank" rel="noopener">PDF ↗</a>
+      </div>
+    </header>
+    <section id="stage" class="stage">
+      <canvas id="pdf-canvas"></canvas>
+      <div id="message" class="message">Загрузка презентации…</div>
+    </section>
+    <footer class="footer"><span id="footer-text">Учебные материалы</span></footer>
+  </main>
+  <script type="module" src="./viewer/viewer.js"></script>
+</body>
+</html>
